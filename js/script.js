@@ -11,7 +11,7 @@ renderer.setSize(window.innerWidth, window.innerHeight)
 document.body.appendChild(renderer.domElement);
 
 var loader = new THREE.GLTFLoader();
-loader.load('Assets/car.gltf',
+loader.load('../Assets/car.gltf',
     function(gltf) {
         scene.add(gltf.scene);
     })
