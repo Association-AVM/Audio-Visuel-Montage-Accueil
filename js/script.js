@@ -1,36 +1,31 @@
-var scene = new THREE.Scene();
+var scene, camera, renderer;
 
-var camera = new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,0.1,1000);
+scene = new THREE.Scene();
+scene.background = new THREE.Color(0xff5f0f);
 
-var renderer = new THREE.WebGLRenderer();
-renderer.setSize(window.innerWidth, window.innerHeight);
+camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight);
+camera.position.set(0, 100, 1000);
+
+renderer = new THREE.WebGLRenderer();
+renderer.setSize(window.innerWidth, window.innerHeight)
 document.body.appendChild(renderer.domElement);
 
-var geometry = new THREE.BoxGeometry(1,1,1);
-var material = new THREE.MeshPhongMaterial({
-    color:"#3b5998"
-});
-var cube = new THREE.Mesh(geometry, material);
+var loader = new THREE.GLTFLoader();
+loader.load('Assets/car.gltf',
+    function(gltf) {
+        scene.add(gltf.scene);
+    })
 
-scene.add(cube);
-camera.position.z=3;
-
-
-var ambientLight = new THREE.AmbientLight(0xFFFFFF,1.5);
-scene.add(ambientLight);
-
-var directionalLight = new THREE.DirectionalLight(0xFFFFFF,1);
-directionalLight.position.set(1,1,0);
-scene.add(directionalLight);
-
-//var controls = new THREE.OrbitControls(camera, renderer.domElement);
+window.addEventListener('resize', function() {
+    renderer.setSize(window.innerWidth, window.innerHeight)
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.a
+})
 
 
-function animate(){
+function animate() {
     requestAnimationFrame(animate);
-    cube.rotation.x+=0.01;
-    cube.rotation.y+=0.01;
+    renderer.render(scene, camera)
 
-    renderer.render(scene,camera);
 }
 animate();
