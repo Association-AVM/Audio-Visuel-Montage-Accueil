@@ -1,6 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Pushster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
+/*font-family: 'Pushster', cursive;  font nav a  */
+/*font-family: 'Libre Baskerville', serif;   font h1 */
+html {
+  font-size: 10px;
+}
+
 body {
   margin: 0;
   padding: 0;
+  font-family: "Pushster", cursive;
+}
+
+canvas {
+  width: 100%;
+  height: 50%;
+}
+
+#page {
+  position: absolute;
+  width: 100%;
+  top: 90%;
+  z-index: 100;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+  background-color: black;
+  height: 10vh;
+}
+header nav {
+  display: flex;
+  align-items: center;
+}
+header nav a {
+  text-decoration: none;
+  color: #fff;
+  margin: 4rem;
+  font-size: 2.5rem;
+  transition: 0.5s all ease-in-out;
+  border-radius: 2rem;
+  padding: 1rem;
+}
+header nav a:hover {
+  letter-spacing: 0.3rem;
+  color: #d3ad45;
+  background-color: #575757;
+}
+header nav a:hover::after {
+  width: 100%;
+  transition: width 0.8s;
+  background: #d3ad45;
+}
+header nav a::after {
+  content: "";
+  width: 0;
+  display: block;
+  height: 2px;
+  background: #fff;
+  transition: width 0.5s;
+}
+header nav h1 {
+  font-size: 5rem;
+  font-family: "Libre Baskerville", serif;
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
