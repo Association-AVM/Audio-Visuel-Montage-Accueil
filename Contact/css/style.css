@@ -99,4 +99,12 @@ header nav h1 {
   border: 0;
 }
 
-.form-group input
+.form-group input {
+text-align: center;
+color: black; 
+}
+
+.col-xl-8 offset-xl-2 {
+  background-color: white;
+
+}
