@@ -1,39 +1,67 @@
-import * as THREE from 'https://unpkg.com/three/build/three.module.js';
-import { OrbitControls } from 'https://unpkg.com/three@0.127.0/examples/jsm/controls/OrbitControls.js';
-import { GLTFLoader } from 'https://unpkg.com/three@0.127.0/examples/jsm/loaders/GLTFLoader.js';
-var scene = new THREE.Scene();
-var camera = new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,0.1,1000);
-var renderer = new THREE.WebGLRenderer();
-renderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(renderer.domElement);
-
-var geometry = new THREE.BoxGeometry(1,1,1);
-var material = new THREE.MeshPhongMaterial({
-    color:"#3b5998"
-});
-var cube = new THREE.Mesh(geometry, material);
-scene.add(cube);
-
-camera.position.z=3;
+import * as THREE from '/three.js-master/three.js-master/build/three.module.js'
+import {GLTFLoader} from '../three.js-master/three.js-master/examples/jsm/loaders/GLTFLoader.js'
+import { OrbitControls } from '../three.js-master/three.js-master/examples/jsm/controls/OrbitControls.js'
 
 
+const canvas = document.querySelector('.webgl')
+const scene = new THREE.Scene()
+const loader = new GLTFLoader()
+
+loader.load('../Assets/car.gltf', function(gltf){
+    console.log(gltf)
+    const mesh = gltf.scene;
+    mesh.position.set(0,-.3,0)
+    mesh.scale.set(1,1,1)
+    scene.add(mesh);
+
+})
+
+const light = new THREE.DirectionalLight(0xffffff,2)
+light.position.set(2,2,2)
+scene.add(light)
+
+const light2 = new THREE.AmbientLight( 0xffffff ); // soft white light
+scene.add( light2 );
 
 
-var ambientLight = new THREE.AmbientLight(0xFFFFFF,1.5);
-scene.add(ambientLight);
 
-var directionalLight = new THREE.DirectionalLight(0xFFFFFF,1);
-directionalLight.position.set(1,1,0);
-scene.add(directionalLight);
+const sizes = {
+    width: window.innerWidth,
+    height: window.innerHeight
+}
 
-//var controls = new THREE.OrbitControls(camera, renderer.domElement);
+const camera = new THREE.PerspectiveCamera(80,sizes.width/sizes.height,0.1,100)
+camera.position.set(0,1,5)
+scene.add(camera)
 
+const renderer = new THREE.WebGL1Renderer({
+    canvas: canvas
+})
+
+
+renderer.setSize(sizes.width, sizes.height)
+renderer.setPixelRatio(Math.min(window.devicePixelRatio,2))
+renderer.shadowMap.enabled = true
+renderer.gammaOuput = true
+
+const controls = new OrbitControls( camera, renderer.domElement );
+controls.autoRotate=true;
+controls.enableZoom=false;
 
 function animate(){
-    requestAnimationFrame(animate);
-    cube.rotation.x+=0.01;
-    cube.rotation.y+=0.01;
-
-    renderer.render(scene,camera);
+    requestAnimationFrame(animate)
+    controls.update();
+    renderer.render(scene,camera)
 }
-animate();
+
+window.addEventListener( 'resize', onWindowResize, false );
+function onWindowResize(){
+
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+
+    renderer.setSize( window.innerWidth, window.innerHeight );
+
+}
+
+animate()
