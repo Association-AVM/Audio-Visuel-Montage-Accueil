@@ -53,7 +53,7 @@ header nav a {
 header nav a:hover {
   letter-spacing: 0.3rem;
   color: #FCE300;
-  background-color: #0587af;
+  background-color: #0b84f596;
 }
 
 header nav a:hover::after {
@@ -94,6 +94,9 @@ header nav h1 {
 }
 
 .col-md-12 {
-  background-color: #101010;
-  margin: 0;padding: 0ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo;
+  border-radius: 25px;
+  margin: 0;padding: 0;
+  border: 0;
 }
+
+.form-group input
