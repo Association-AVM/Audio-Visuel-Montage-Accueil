@@ -20,11 +20,10 @@ canvas {
   display: block;
 }
 
-#page {
+#container {
   position: absolute;
   width: 100%;
   top: 90%;
-  z-index: 100;
 }
 
 header {
