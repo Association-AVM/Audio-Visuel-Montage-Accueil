@@ -32,33 +32,19 @@
             </header>
         </div>
         
+
         <div class="loader-wrapper">
             <span class="loader">
                 <span class="loader-inner"></span>
             </span>
         </div>
-       
-
         <div id="cursor"></div>
-
-        <script>
-            var cursor = document.getElementById("cursor");
-            document.onmousemove = function(e){
-                cursor.style.left = (e.pageX-20) +"px";
-                cursor.style.top = (e.pageY-20) +"px";
-                cursor.style.display ="block";
-                
-            }
-
-        </script>
-
-
     <!--Fin de la div page-->
     </div>
 
-
-
     <script type="module" src="js/threeJs.js"></script>
     <script src="js/loader.js"></script>
+    <script src="js/cursor.js"></script>
+
 </body>
 </html>

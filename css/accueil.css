@@ -6,6 +6,8 @@ html {
 }
 
 body {
+  overflow-y: hidden;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   font-family: "Playfair Display", serif;
@@ -23,7 +25,7 @@ canvas {
 #container-header {
   position: absolute;
   width: 100%;
-  top: 40%;
+  top: 45%;
   animation: fade 2.5s ease-in;
 }
 
@@ -31,7 +33,7 @@ header {
   display: flex;
   justify-content: center;
   overflow-x: hidden;
-  height: 20vh;
+  height: auto;
 }
 header #wrapper-header {
   display: flex;
@@ -107,7 +109,7 @@ header #wrapper-header h3 {
   width: 3rem;
   height: 3rem;
   position: relative;
-  border: 4px solid #Fff;
+  border: 4px solid #fff;
   animation: loader 3s infinite ease;
 }
 .loader-wrapper .loader .loader-inner {
@@ -121,7 +123,7 @@ header #wrapper-header h3 {
 #cursor {
   height: 40px;
   width: 40px;
-  background: #612222;
+  background: #a38717;
   border-radius: 50%;
   position: absolute;
   display: none;
