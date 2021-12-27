@@ -15,6 +15,10 @@ body {
   cursor: url("../Assets/cursor-mini.png"), auto;
 }
 
+a:hover {
+  cursor: url("../Assets/cursor-mini.png"), auto;
+}
+
 canvas {
   width: 100vw;
   height: 100vh;
@@ -66,20 +70,20 @@ header #wrapper-header h3 {
   transition: box-shadow 1s;
 }
 #container-nav:hover {
-  box-shadow: 0 300px 50px -100px #30548a inset;
+  box-shadow: 20rem 0rem 5rem -10rem #30548a inset;
 }
 
 #wrapper-nav {
   display: flex;
   flex-direction: column;
-  border: 0.2rem solid white;
+  border-left: 0.2rem solid white;
   padding: 2rem;
   overflow: hidden;
 }
 #wrapper-nav a {
   z-index: 2;
   color: white;
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-decoration: none;
   border-bottom: solid 0.1rem white;
   text-align: left;
@@ -89,6 +93,41 @@ header #wrapper-header h3 {
   animation: translate-left-to-right 2.5s;
 }
 #wrapper-nav a:hover {
+  color: #EBC116;
+  width: 100%;
+}
+
+#container-reseaux {
+  position: absolute;
+  bottom: 5%;
+  right: 3%;
+  overflow: hidden;
+  background-color: black;
+  transition: box-shadow 1s;
+}
+#container-reseaux:hover {
+  box-shadow: -20rem 0rem 5rem -10rem #30548a inset;
+}
+
+#wrapper-reseaux {
+  display: flex;
+  flex-direction: column;
+  border-right: 0.2rem solid white;
+  padding: 2rem;
+  overflow: hidden;
+}
+#wrapper-reseaux a {
+  z-index: 2;
+  color: white;
+  font-size: 2.5rem;
+  text-decoration: none;
+  border-bottom: solid 0.1rem white;
+  width: 20%;
+  transition: 0.6s ease-in;
+  margin-bottom: 1rem;
+  animation: translate-right-to-left 2.5s;
+}
+#wrapper-reseaux a:hover {
   color: #EBC116;
   width: 100%;
 }
@@ -121,9 +160,9 @@ header #wrapper-header h3 {
 }
 
 #cursor {
-  height: 40px;
-  width: 40px;
-  background: #a38717;
+  height: 4rem;
+  width: 4rem;
+  background: #a31717;
   border-radius: 50%;
   position: absolute;
   display: none;
@@ -183,6 +222,14 @@ div:hover ~ #cursor {
 @keyframes translate-left-to-right {
   0% {
     transform: translateX(-10rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes translate-right-to-left {
+  0% {
+    transform: translateX(10rem);
   }
   100% {
     transform: translateX(0);
