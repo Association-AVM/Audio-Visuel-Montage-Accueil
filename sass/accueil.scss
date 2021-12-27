@@ -72,6 +72,7 @@ header{
     padding:2rem;
     overflow: hidden;
     a{
+      z-ind
       color:white;
       font-size:2rem;
       text-decoration:none;
@@ -118,6 +119,19 @@ header{
       }
     }
   }
+
+#cursor{
+  height:50px;
+  width:50px;
+  background:$bleu;
+  border-radius:50%;
+  position:absolute;
+  display:none;
+  transition:0.5s;
+  transition-timing-function: ease-out;
+
+}
+
 
   @keyframes loader {
     0% { transform: rotate(0deg); transform: translateY(-10rem);}
