@@ -50,13 +50,19 @@ header #wrapper-header h3 {
   letter-spacing: 0.6rem;
   font-size: 2rem;
   text-align: center;
-  animation: translate-up-to-down 2.5s;
+  animation: translate-up-to-down 3s;
 }
 
 #container-nav {
   position: absolute;
   top: 5%;
   left: 3%;
+  overflow: hidden;
+  background-color: black;
+  transition: box-shadow 1s;
+}
+#container-nav:hover {
+  box-shadow: 0 300px 50px -100px #30548a inset;
 }
 
 #wrapper-nav {
@@ -75,7 +81,7 @@ header #wrapper-header h3 {
   width: 20%;
   transition: 0.6s ease-in;
   margin-bottom: 1rem;
-  animation: translate-left-to-right 1.5s;
+  animation: translate-left-to-right 2.5s;
 }
 #wrapper-nav a:hover {
   color: #EBC116;
