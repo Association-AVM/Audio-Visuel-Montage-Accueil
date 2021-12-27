@@ -5,3 +5,45 @@ commande pour compiler le scss sur windows :
 (style.scss => nom du fichier scss) -- (style.css => nom du fichier css crée)
 
 http://127.0.0.1:5500/
+
+
+    banck color 
+  jaune : #FCE300;
+  bleu : #0b84f596;
+  rouge : #FF0000;
+
+
+
+
+////////////////////////////////////////////// Plan du Site //////////////////////////////////////////////
+
+
+------------------------------------------------ PUBLIC ------------------------------------------------
+        audiovisuel-montage.fr
+        |--Index.html
+
+        |contact.audiovisuel-montage.fr
+            |--Index.php/.html
+
+        |projets.audiovisuel-montage.fr
+            |--Index
+                | Projet 1
+                    |--Index
+                | Projet 2
+                    |--Index
+                | Projet 3
+                    |--Index
+        
+        |acces.audiovisuel-montage.fr
+            |--Index
+                | Popup Connexion  
+                | Popup Inscription
+------------------------------------------------ Privé ------------------------------------------------
+        |espace-membres.audiovisuel-montage.fr
+            |--Index
+                | Boutique
+                    |--Index
+                | Projets
+                    |--Index
+                | Commandes
+                    |--Index
