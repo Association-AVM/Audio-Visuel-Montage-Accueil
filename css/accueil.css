@@ -1,7 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Pushster&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
-/*font-family: 'Pushster', cursive;  font nav a  */
-/*font-family: 'Libre Baskerville', serif;   font h1 */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap");
+/*font-family: 'Playfair Display', serif;*/
 html {
   font-size: 10px;
 }
@@ -9,28 +7,29 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Pushster", cursive;
+  font-family: "Playfair Display", serif;
   background-color: black;
-  cursor: url("../Assets/cursor.png"), auto;
+  cursor: url("../Assets/cursor-mini.png"), auto;
 }
 
 canvas {
   width: 100vw;
   height: 100vh;
   display: block;
+  animation: fade 2.5s ease;
 }
 
-#container {
+#container-header {
   position: absolute;
   width: 100%;
-  top: 90%;
+  top: 40%;
+  animation: fade 2.5s ease-in;
 }
 
 header {
   display: flex;
   justify-content: center;
   overflow-x: hidden;
-  background-color: black;
   height: 10vh;
 }
 header nav {
@@ -50,7 +49,7 @@ header nav a:hover {
   letter-spacing: 0.3rem;
   color: #d3ad45;
   background-color: #575757;
-  cursor: url("../Assets/cursor.png"), auto;
+  cursor: url("../Assets/cursor-mini.png"), auto;
 }
 header nav a:hover::after {
   width: 100%;
@@ -61,7 +60,7 @@ header nav a::after {
   content: "";
   width: 0;
   display: block;
-  height: 2px;
+  height: 0.15rem;
   background: #fff;
   transition: width 0.5s;
 }
@@ -69,14 +68,6 @@ header nav h1 {
   font-size: 5rem;
   font-family: "Libre Baskerville", serif;
   color: #fff;
-}
-
-.content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
 }
 
 .loader-wrapper {
@@ -90,17 +81,15 @@ header nav h1 {
   justify-content: center;
   align-items: center;
 }
-
-.loader {
+.loader-wrapper .loader {
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 3rem;
+  height: 3rem;
   position: relative;
   border: 4px solid #Fff;
   animation: loader 3s infinite ease;
 }
-
-.loader-inner {
+.loader-wrapper .loader .loader-inner {
   vertical-align: top;
   display: inline-block;
   width: 100%;
@@ -111,6 +100,7 @@ header nav h1 {
 @keyframes loader {
   0% {
     transform: rotate(0deg);
+    transform: translateY(-10rem);
   }
   25% {
     transform: rotate(180deg);
@@ -123,6 +113,7 @@ header nav h1 {
   }
   100% {
     transform: rotate(360deg);
+    border-radius: 2rem;
   }
 }
 @keyframes loader-inner {
@@ -140,7 +131,16 @@ header nav h1 {
   }
   100% {
     height: 0%;
+    border-radius: 2rem;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=accueil.css.map */
