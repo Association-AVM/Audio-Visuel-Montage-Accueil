@@ -38,6 +38,7 @@ header{
             align-items:center;
             overflow: hidden;
             h1{
+              z-index:2;
                 font-size: 9rem;
                 font-family: 'Libre Baskerville', serif;
                 color: #fff;
@@ -45,6 +46,7 @@ header{
                 animation: translate-down-to-up 2s;
             }
             h3{
+              z-index:2;
               letter-spacing:0.6rem;
               font-size:2rem;
               text-align:center;
@@ -72,7 +74,7 @@ header{
     padding:2rem;
     overflow: hidden;
     a{
-      z-ind
+      z-index:2;
       color:white;
       font-size:2rem;
       text-decoration:none;
@@ -123,13 +125,15 @@ header{
 #cursor{
   height:50px;
   width:50px;
-  background:$bleu;
+  background:$jaune;
   border-radius:50%;
   position:absolute;
   display:none;
-  transition:0.5s;
+  transition:0.3s;
   transition-timing-function: ease-out;
-
+}
+div:hover ~ #cursor{
+  transform:scale(0.5);
 }
 
 
