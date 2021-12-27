@@ -3,6 +3,7 @@
 /*font-family: 'Playfair Display', serif;*/
 $jaune:#EBC116;
 $bleu:#30548a;
+$noir:#141414;
 
 html{
     font-size: 10px;
@@ -14,7 +15,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Playfair Display', serif;
-  background-color: black;
+  background-color: $noir;
   cursor: url("../Assets/cursor-mini.png"),auto;    
 }
 a:hover{
@@ -65,7 +66,7 @@ header{
   top:15%;
   left:3%;
   overflow:hidden;
-  background-color:black;
+  background-color:$noir;
   transition: box-shadow 1s;
   &:hover{
   box-shadow: 20rem 0rem 5rem -10rem $bleu inset; 
@@ -102,7 +103,7 @@ header{
     bottom: 15%;
     right:3%;
     overflow:hidden;
-    background-color:black;
+    background-color:$noir;
     transition: box-shadow 1s;
     &:hover{
     box-shadow: -20rem 0rem 5rem -10rem $bleu inset; 

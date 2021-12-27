@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
+/*font-family: 'Playfair Display', serif;*/
+$jaune:#EBC116;
+$bleu:#30548a;
+
+html{
+    font-size: 10px;
+    color:black;
+    cursor: url("../Assets/cursor-mini.png"),auto;    
+
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Playfair Display', serif;
+  background-color: rgb(20, 20, 20);
+}
+a:hover{
+  cursor: url("../Assets/cursor-mini.png"),auto;    
+}
+
+#cursor{
+    height:4rem;
+    width:4rem;
+    background:#a31717;
+    border-radius:50%;
+    position:absolute;
+    display:none;
+    transition:0.3s;
+    transition-timing-function: ease-out;
+  }
+  div:hover ~ #cursor{
+    transform:scale(0.5);
+  }

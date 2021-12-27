@@ -1,5 +1,5 @@
 <?php
-
+?>
 <html lang="fr">
 
 head
@@ -132,4 +132,3 @@ head
 </body>
 </html>
 
-?>

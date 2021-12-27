@@ -5,6 +5,7 @@ import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.121.1/exampl
 
 const canvas = document.querySelector('.webgl')
 const scene = new THREE.Scene()
+scene.background = new THREE.Color("#141414")
 const loader = new GLTFLoader()
 
 loader.load('../Assets/car.gltf', function(gltf){
