@@ -63,7 +63,7 @@ header #wrapper-header h3 {
 
 #container-nav {
   position: absolute;
-  top: 5%;
+  top: 15%;
   left: 3%;
   overflow: hidden;
   background-color: black;
@@ -99,14 +99,14 @@ header #wrapper-header h3 {
 
 #container-reseaux {
   position: absolute;
-  bottom: 5%;
+  top: 15%;
   right: 3%;
   overflow: hidden;
   background-color: black;
   transition: box-shadow 1s;
 }
 #container-reseaux:hover {
-  box-shadow: -20rem 0rem 5rem -10rem #30548a inset;
+  box-shadow: -20rem 0rem 5rem -10rem #5a1c1c inset;
 }
 
 #wrapper-reseaux {
@@ -221,7 +221,7 @@ div:hover ~ #cursor {
 }
 @keyframes translate-left-to-right {
   0% {
-    transform: translateX(-10rem);
+    transform: translateX(-20rem);
   }
   100% {
     transform: translateX(0);
@@ -229,7 +229,7 @@ div:hover ~ #cursor {
 }
 @keyframes translate-right-to-left {
   0% {
-    transform: translateX(10rem);
+    transform: translateX(20rem);
   }
   100% {
     transform: translateX(0);

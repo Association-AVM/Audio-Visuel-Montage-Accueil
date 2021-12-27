@@ -62,7 +62,7 @@ header{
 
 #container-nav{
   position:absolute;
-  top:5%;
+  top:15%;
   left:3%;
   overflow:hidden;
   background-color:black;
@@ -99,13 +99,13 @@ header{
 
   #container-reseaux{
     position:absolute;
-    bottom: 5%;
+    top: 15%;
     right:3%;
     overflow:hidden;
     background-color:black;
     transition: box-shadow 1s;
     &:hover{
-    box-shadow: -20rem 0rem 5rem -10rem $bleu inset; 
+    box-shadow: -20rem 0rem 5rem -10rem rgb(90, 28, 28) inset; 
   
     }
   }
@@ -125,6 +125,7 @@ header{
         transition:0.6s ease-in;
         margin-bottom:1rem;
         animation: translate-right-to-left 2.5s;
+
         &:hover{
           color:$jaune;
           width:100%;
@@ -195,11 +196,11 @@ div:hover ~ #cursor{
     100% {opacity: 1;}
   }
   @keyframes translate-left-to-right{
-    0%{transform: translateX(-10rem);}
+    0%{transform: translateX(-20rem);}
     100% {transform: translateX(0);}
   }
   @keyframes translate-right-to-left{
-    0%{transform: translateX(10rem);}
+    0%{transform: translateX(20rem);}
     100% {transform: translateX(0);}
   }
   @keyframes translate-down-to-up{
