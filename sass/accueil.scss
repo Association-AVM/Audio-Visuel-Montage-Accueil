@@ -1,35 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Pushster&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
-/*font-family: 'Pushster', cursive;  font nav a  */ 
-/*font-family: 'Libre Baskerville', serif;   font h1 */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
+/*font-family: 'Playfair Display', serif;*/
 
 
 html{
     font-size: 10px;
-    
 }
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Pushster', cursive;
+    font-family: 'Playfair Display', serif;
     background-color: black;
-    cursor: url("../Assets/cursor.png"),auto;    
+    cursor: url("../Assets/cursor-mini.png"),auto;    
 }
 canvas{
     width: 100vw;
     height: 100vh;
     display: block;
+    animation: fade 2.5s ease;
 }
-#container{
+#container-header{
     position: absolute;
 	  width: 100%;
-    top: 90%;
+    top: 40%;
+    animation: fade 2.5s ease-in;
 }
 header{
     display: flex;
     justify-content: center;
     overflow-x: hidden;
-    background-color: black;
     height: 10vh;
         nav{
             display: flex;
@@ -46,7 +45,7 @@ header{
                     letter-spacing: 0.3rem;
                     color: rgb(211, 173, 69);
                     background-color: rgb(87, 87, 87);  
-                    cursor: url("../Assets/cursor.png"),auto;    
+                    cursor: url("../Assets/cursor-mini.png"),auto;    
 
                 }
 
@@ -59,7 +58,7 @@ header{
                     content: '';
                     width: 0;
                     display: block;
-                    height: 2px;
+                    height: 0.15rem;
                     background: #fff;
                     transition: width 0.5s;
                 }
@@ -74,13 +73,7 @@ header{
 }
 
 
-  .content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width:100%;
-    height:100%;
-  }
+
   .loader-wrapper {
     width: 100%;
     height: 100%;
@@ -91,33 +84,40 @@ header{
     display:flex;
     justify-content: center;
     align-items: center;
+  
+    .loader {
+      display: inline-block;
+      width: 3rem;
+      height: 3rem;
+      position: relative;
+      border: 4px solid #Fff;
+      animation: loader 3s infinite ease;
+    
+      .loader-inner {
+        vertical-align: top;
+        display: inline-block;
+        width: 100%;
+        background-color: #fff;
+        animation: loader-inner 3s infinite ease-in;
+      }
+    }
   }
-  .loader {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    position: relative;
-    border: 4px solid #Fff;
-    animation: loader 3s infinite ease;
-  }
-  .loader-inner {
-    vertical-align: top;
-    display: inline-block;
-    width: 100%;
-    background-color: #fff;
-    animation: loader-inner 3s infinite ease-in;
-  }
+
   @keyframes loader {
-    0% { transform: rotate(0deg);}
+    0% { transform: rotate(0deg); transform: translateY(-10rem);}
     25% { transform: rotate(180deg);}
     50% { transform: rotate(180deg);}
     75% { transform: rotate(360deg);}
-    100% { transform: rotate(360deg);}
+    100% { transform: rotate(360deg); border-radius: 2rem;}
   }
   @keyframes loader-inner {
     0% { height: 0%;}
     25% { height: 0%;}
     50% { height: 100%;}
     75% { height: 100%;}
-    100% { height: 0%;}
+    100% { height: 0%; border-radius: 2rem}
+  }
+  @keyframes fade {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
   }
