@@ -67,7 +67,6 @@ div:hover ~ #cursor {
 
 ::-webkit-scrollbar-thumb {
   background: #d1b33b;
-  border-radius: 1rem;
 }
 
 .one {
@@ -84,6 +83,113 @@ div:hover ~ #cursor {
 
 .four {
   background-color: #D5D5D5;
+}
+
+#container-nav {
+  z-index: 1;
+  position: absolute;
+  top: 15%;
+  left: 3%;
+  overflow: hidden;
+  transition: box-shadow 1s;
+  /*&:hover{
+    box-shadow: 20rem 0rem 5rem -10rem $blanc inset; 
+  }*/
+}
+
+#wrapper-nav {
+  display: flex;
+  flex-direction: column;
+  border-left: 0.2rem solid #141414;
+  padding: 2rem;
+  overflow: hidden;
+}
+#wrapper-nav a {
+  z-index: 2;
+  color: #141414;
+  font-size: 2.5rem;
+  text-decoration: none;
+  border-bottom: solid 0.1rem #141414;
+  text-align: left;
+  width: 20%;
+  transition: 0.6s ease-in;
+  margin-bottom: 1rem;
+  animation: translate-left-to-right 2.5s;
+}
+#wrapper-nav a:hover {
+  color: white;
+  width: 100%;
+}
+
+.container-slide {
+  align-items: flex-end;
+  justify-content: center;
+  display: flex;
+}
+.container-slide h3 {
+  width: 30%;
+  font-size: 2.5rem;
+  text-align: justify;
+  margin-right: 2rem;
+}
+.container-slide .card {
+  height: 80vh;
+  width: 50vw;
+  background-color: #141414;
+  display: flex;
+  align-items: flex-end;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(http://cinema-athena.fr/wp-content/uploads/2021/03/frequentation-salles-cinema-cesse-daugmenter-atteint-20112156-millions-dentrees_0_1399_933-1024x683.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.container-slide .card::before {
+  content: "Charles-Adrien Vlamynck";
+  position: absolute;
+  font-size: 6rem;
+  top: -6%;
+  color: rebeccapurple;
+  background: linear-gradient(#141414 60%, #d1b33b 60%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.container-slide .card a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  height: 15rem;
+  width: 15rem;
+  right: -5%;
+  bottom: -5%;
+  font-size: 3rem;
+  border-radius: 50%;
+  background-color: #D5D5D5;
+  color: #000;
+  position: absolute;
+  transition: 0.8s ease;
+}
+.container-slide .card a:hover {
+  background-color: #141414;
+  color: #D5D5D5;
+}
+.container-slide .card h2 {
+  margin: 0;
+  font-size: 10rem;
+  color: #fff;
+  transform-origin: bottom left;
+  transform: rotate(-90deg) translateY(100%);
+}
+
+@keyframes translate-left-to-right {
+  0% {
+    transform: translateX(-20rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 /*# sourceMappingURL=projets.css.map */
