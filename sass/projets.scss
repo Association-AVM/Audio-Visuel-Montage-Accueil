@@ -51,7 +51,7 @@ a:hover{
   .blocHorizontal{
     display: flex;
     flex-direction: row;
-    width: 400vw;
+    width: 540vw;
     transform: rotate(90deg) translateY(-100vh);
     transform-origin: top left;
   }
@@ -81,6 +81,7 @@ a:hover{
   }
   .two{
     background-color: $bleu;
+    width: 240vw;
   }
   .three {
     background-color: $rouge;
@@ -92,13 +93,10 @@ a:hover{
   #container-nav{
     z-index: 1;
     position:absolute;
-    top:15%;
+    top:10%;
     left:3%;
     overflow:hidden;
     transition: box-shadow 1s;
-    /*&:hover{
-    box-shadow: 20rem 0rem 5rem -10rem $blanc inset; 
-  }*/
   }
     #wrapper-nav{
       display:flex;
@@ -124,6 +122,7 @@ a:hover{
       }
     }
 
+    /*Premiere slide*/
     .container-slide{
       align-items: flex-end;
       justify-content: center;
@@ -134,6 +133,7 @@ a:hover{
         justify-content: center;
         width: 30%;
         overflow: hidden;
+        position: relative;
         h2{
           font-size: 6rem;
           margin-bottom: 15vh;
@@ -141,8 +141,7 @@ a:hover{
         }
         .middle{
           position: absolute;
-          top: 55%;
-          left: 25vw;
+          left: 50%;
           transform: translateX(-50%);
           z-index:1;
         }
@@ -172,7 +171,6 @@ a:hover{
         margin-right: 2.5rem;
         padding-bottom: 1rem;
         animation: translate-down-to-up 2s ease;
-
       }
       .card{
         height: 80vh;
@@ -180,7 +178,7 @@ a:hover{
         background-color: $noir;
         display: flex;
         align-items: flex-end;
-        background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(http://cinema-athena.fr/wp-content/uploads/2021/03/frequentation-salles-cinema-cesse-daugmenter-atteint-20112156-millions-dentrees_0_1399_933-1024x683.jpg);
+        background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,1)),url(http://cinema-athena.fr/wp-content/uploads/2021/03/frequentation-salles-cinema-cesse-daugmenter-atteint-20112156-millions-dentrees_0_1399_933-1024x683.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -214,6 +212,8 @@ a:hover{
             &:hover{
               background-color: $noir;
               color: $blanc;
+              height: 16rem;
+              width: 16rem;
             }
           }
         h2{
@@ -227,6 +227,185 @@ a:hover{
         }
       }
     }
+    /*Fin première slide*/
+    /*Deuxième slide*/
+
+    .container-slide-two{
+      align-items: flex-end;
+      justify-content: center;
+      display: flex;
+      .background-1{
+        height: 70vh;
+        width: 55vw;
+        background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.8)),url(https://images.pexels.com/photos/4595636/pexels-photo-4595636.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-right: 15vw;
+        transition: 0.3s;
+        position: relative;
+        &::before{
+          content: '02.1 - Faites vivre vos projets';
+          position: absolute;
+          font-size: 8rem;
+          width: 150%;
+          top: 40%;
+          left: -5%;
+          color: rebeccapurple;
+          background: linear-gradient( $jaune 60%, $blanc 60%);
+	        -webkit-background-clip: text;
+	        -webkit-text-fill-color: transparent;
+        }
+        &:hover{
+          filter: grayscale(100%);
+          transform: scale(0.95);
+        }
+      }
+      .background-2{
+        height: 60vh;
+        width: 60vw;
+        background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.6)),url(https://images.pexels.com/photos/7909364/pexels-photo-7909364.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-right: 15vw;
+        transition: 0.3s;
+        position: relative;
+        &::before{
+          content: '02.2 - Une équipe entière pour vous';
+          position: absolute;
+          font-size: 7rem;
+          width: 150%;
+          bottom: -7%;
+          left: -5%;
+          color: rebeccapurple;
+          background: linear-gradient( #9c3535 60%, $noir 60%);
+	        -webkit-background-clip: text;
+	        -webkit-text-fill-color: transparent;
+        }
+        &:hover{
+          filter: grayscale(100%);
+          transform: scale(0.95);
+        }
+      }
+      .container-text-two{
+        margin-left: 5vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 20%;
+        overflow: hidden;
+        position: relative;
+        h2{
+          font-size: 6rem;
+          margin-bottom: 15vh;
+          animation: translate-right-to-left 3s ease;
+        }
+        .middle-two{
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index:1;
+        }
+        .mouse-two{
+          width: 10rem;
+          height: 8rem;
+          border: 0.4rem solid #333;
+          border-radius: 1rem;
+          &::after{
+            content: '';
+            width: 7rem;
+            height: 0.5rem;
+            border-radius: 1rem;
+            background: #333;
+            position: absolute;
+            bottom: -10%;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+          &::before{
+            content: '';
+            width: 1rem;
+            height: 1rem;
+            position: absolute;
+            background: #333;
+            top: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 50%;
+            opacity: 1;
+            animation: line 2s infinite;
+          }
+        }
+      }
+      h3{
+        font-size: 2.5rem;
+        text-align: justify;
+        margin-right: 2.5rem;
+        padding-bottom: 1rem;
+        animation: translate-down-to-up 2s ease;
+      }
+      .card-two{
+        margin-right: 15vw;
+        height: 80vh;
+        width: 50vw;
+        background-color: $noir;
+        display: flex;
+        align-items: flex-end;
+        background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,1)),url(https://images.pexels.com/photos/5314213/pexels-photo-5314213.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        animation: fade 2.5s;
+        &::before{
+          content: '02 - Charles-Adrien Vlamynck';
+          position: absolute;
+          font-size: 6rem;
+          top: -6%;
+          color: rebeccapurple;
+          background: linear-gradient( $noir 60%, $bleu 60%);
+	        -webkit-background-clip: text;
+	        -webkit-text-fill-color: transparent;
+        }
+          a{
+            display: flex;
+            align-items: center;
+            text-align: center;
+            text-decoration: none;
+            height: 15rem;
+            width: 15rem;
+            right: -5%;
+            bottom: -5%;
+            font-size: 2.5rem;
+            border-radius: 50%;
+            background-color: $blanc;
+            color: #000;
+            position: absolute;
+            transition: 0.8s ease; 
+            &:hover{
+              background-color: $noir;
+              color: $blanc;
+              height: 16rem;
+              width: 16rem;
+            }
+          }
+        h2{
+          margin: 0;
+          font-size: 10rem;
+          color: #fff;
+          transform-origin: bottom left;
+          transform: rotate(-90deg)translateY(100%);
+          animation: 5s ease fade;
+
+        }
+      }
+    }
+
+    /*Fin deuxième slide*/
+
+
+
 
 
     .loader-wrapper {
@@ -263,15 +442,14 @@ a:hover{
 /*Animation*/
 
     @keyframes mouse{
-      from{
-        opacity: 1;
-        top: 1rem;
-      }
-      to{
-        opacity: 0;
-        top: 8rem;
-      }
+      0%{opacity: 1;top: 1rem;}
+      100%{opacity: 0;top: 8rem;}
     }
+    @keyframes line{
+      0%{opacity: 1;left: 1rem;top: 1rem;}
+      100%{opacity: 0;left: 10rem;top: 1rem}
+    }
+    
     @keyframes loader {
       0% { transform: rotate(0deg); transform: translateY(10rem); border-radius: 3rem;}
       25% { transform: rotate(180deg);}
