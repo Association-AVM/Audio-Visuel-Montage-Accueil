@@ -66,24 +66,24 @@ div:hover ~ #cursor {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #EBC116;
+  background: #d1b33b;
   border-radius: 1rem;
 }
 
 .one {
-  background-color: #EBC116;
+  background-color: #d1b33b;
 }
 
 .two {
-  background-color: aqua;
+  background-color: #30548a;
 }
 
 .three {
-  background-color: bisque;
+  background-color: #6d3434;
 }
 
 .four {
-  background-color: burlywood;
+  background-color: #D5D5D5;
 }
 
 /*# sourceMappingURL=projets.css.map */

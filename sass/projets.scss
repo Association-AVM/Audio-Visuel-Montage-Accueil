@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
 
 /*font-family: 'Playfair Display', serif;*/
-$jaune:#EBC116;
+$jaune:#d1b33b;
 $bleu:#30548a;
+$rouge:#6d3434;
+$blanc:#D5D5D5;
 
 html{
     font-size: 10px;
@@ -14,7 +16,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Playfair Display', serif;
-  background-color: rgb(20, 20, 20);
+  background-color: #141414;
   overflow: hidden;
 }
 a:hover{
@@ -74,14 +76,14 @@ a:hover{
 
 
   .one{
-    background-color: #EBC116;
+    background-color: $jaune;
   }
   .two{
-    background-color: aqua;
+    background-color: $bleu;
   }
   .three {
-    background-color: bisque;
+    background-color: $rouge;
   }
   .four{
-    background-color: burlywood;
+    background-color: $blanc;
   }
