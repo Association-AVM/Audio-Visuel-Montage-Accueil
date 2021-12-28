@@ -15,6 +15,7 @@ body {
   padding: 0;
   font-family: 'Playfair Display', serif;
   background-color: rgb(20, 20, 20);
+  overflow: hidden;
 }
 a:hover{
   cursor: url("../Assets/cursor-mini.png"),auto;    
@@ -32,4 +33,55 @@ a:hover{
   }
   div:hover ~ #cursor{
     transform:scale(0.5);
+  }
+
+  .slide{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10rem;
+  }
+
+  .blocHorizontal{
+    display: flex;
+    flex-direction: row;
+    width: 400vw;
+    transform: rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+  }
+
+  #container-slides{
+    width: 100vh;
+    height: 100vw;
+    transform: rotate(-90deg) translateX(-100vh);
+    transform-origin: top left;
+    overflow-x: hidden;
+
+
+    /*pour mozilla et ie*/
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+::-webkit-scrollbar{
+  width: 1.7rem;
+}
+::-webkit-scrollbar-thumb{
+  background: $jaune;
+  border-radius: 1rem;
+}
+
+
+  .one{
+    background-color: #EBC116;
+  }
+  .two{
+    background-color: aqua;
+  }
+  .three {
+    background-color: bisque;
+  }
+  .four{
+    background-color: burlywood;
   }
