@@ -223,7 +223,6 @@ a:hover{
           transform-origin: bottom left;
           transform: rotate(-90deg)translateY(100%);
           animation: 5s ease fade;
-
         }
       }
     }
@@ -241,17 +240,16 @@ a:hover{
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        margin-right: 15vw;
+        margin-right: 10vw;
         transition: 0.3s;
         position: relative;
         &::before{
           content: '02.1 - Faites vivre vos projets';
           position: absolute;
-          font-size: 8rem;
-          width: 150%;
+          font-size: 9rem;
+          width: 111%;
           top: 40%;
           left: -5%;
-          color: rebeccapurple;
           background: linear-gradient( $jaune 60%, $blanc 60%);
 	        -webkit-background-clip: text;
 	        -webkit-text-fill-color: transparent;
@@ -261,6 +259,10 @@ a:hover{
           transform: scale(0.95);
         }
       }
+      #container-background-2{
+        display: flex;
+        flex-direction: column;        
+      }
       .background-2{
         height: 60vh;
         width: 60vw;
@@ -268,17 +270,16 @@ a:hover{
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        margin-right: 15vw;
+        margin-right: 10vw;
         transition: 0.3s;
         position: relative;
         &::before{
           content: '02.2 - Une équipe entière pour vous';
           position: absolute;
-          font-size: 7rem;
-          width: 150%;
+          font-size: 8rem;
+          width: 112%;
           bottom: -7%;
           left: -5%;
-          color: rebeccapurple;
           background: linear-gradient( #9c3535 60%, $noir 60%);
 	        -webkit-background-clip: text;
 	        -webkit-text-fill-color: transparent;
@@ -287,13 +288,39 @@ a:hover{
           filter: grayscale(100%);
           transform: scale(0.95);
         }
+        a{
+          display: flex;
+          align-items: center;
+          text-align: center;
+          justify-content: center;
+          text-decoration: none;
+          height: 15rem;
+          width: 15rem;
+          left: 50%;
+          top: -10%;
+          transform: translateX(-50%);
+          font-size: 2.2rem;
+          border-radius: 50%;
+          background-color: $jaune;
+          color: #000;
+          position: absolute;
+          transition: 0.8s ease; 
+          &:hover{
+            background-color: $noir;
+            color: $blanc;
+            height: 16rem;
+            width: 16rem;
+          }
+        }
+        
+        
       }
       .container-text-two{
         margin-left: 5vw;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 20%;
+        width: 15%;
         overflow: hidden;
         position: relative;
         h2{
@@ -346,7 +373,7 @@ a:hover{
         animation: translate-down-to-up 2s ease;
       }
       .card-two{
-        margin-right: 15vw;
+        margin-right: 10vw;
         height: 80vh;
         width: 50vw;
         background-color: $noir;
@@ -379,13 +406,13 @@ a:hover{
             bottom: -5%;
             font-size: 2.5rem;
             border-radius: 50%;
-            background-color: $blanc;
-            color: #000;
+            background-color: $noir;
+            color: $blanc;
             position: absolute;
             transition: 0.8s ease; 
             &:hover{
-              background-color: $noir;
-              color: $blanc;
+              background-color: $blanc;
+              color: $noir;
               height: 16rem;
               width: 16rem;
             }

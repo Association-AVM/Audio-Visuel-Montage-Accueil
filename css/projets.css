@@ -239,18 +239,17 @@ div:hover ~ #cursor {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-right: 15vw;
+  margin-right: 10vw;
   transition: 0.3s;
   position: relative;
 }
 .container-slide-two .background-1::before {
   content: "02.1 - Faites vivre vos projets";
   position: absolute;
-  font-size: 8rem;
-  width: 150%;
+  font-size: 9rem;
+  width: 111%;
   top: 40%;
   left: -5%;
-  color: rebeccapurple;
   background: linear-gradient(#d1b33b 60%, #D5D5D5 60%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -259,6 +258,10 @@ div:hover ~ #cursor {
   filter: grayscale(100%);
   transform: scale(0.95);
 }
+.container-slide-two #container-background-2 {
+  display: flex;
+  flex-direction: column;
+}
 .container-slide-two .background-2 {
   height: 60vh;
   width: 60vw;
@@ -266,18 +269,17 @@ div:hover ~ #cursor {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-right: 15vw;
+  margin-right: 10vw;
   transition: 0.3s;
   position: relative;
 }
 .container-slide-two .background-2::before {
   content: "02.2 - Une équipe entière pour vous";
   position: absolute;
-  font-size: 7rem;
-  width: 150%;
+  font-size: 8rem;
+  width: 112%;
   bottom: -7%;
   left: -5%;
-  color: rebeccapurple;
   background: linear-gradient(#9c3535 60%, #141414 60%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -286,12 +288,36 @@ div:hover ~ #cursor {
   filter: grayscale(100%);
   transform: scale(0.95);
 }
+.container-slide-two .background-2 a {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  text-decoration: none;
+  height: 15rem;
+  width: 15rem;
+  left: 50%;
+  top: -10%;
+  transform: translateX(-50%);
+  font-size: 2.2rem;
+  border-radius: 50%;
+  background-color: #d1b33b;
+  color: #000;
+  position: absolute;
+  transition: 0.8s ease;
+}
+.container-slide-two .background-2 a:hover {
+  background-color: #141414;
+  color: #D5D5D5;
+  height: 16rem;
+  width: 16rem;
+}
 .container-slide-two .container-text-two {
   margin-left: 5vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 20%;
+  width: 15%;
   overflow: hidden;
   position: relative;
 }
@@ -344,7 +370,7 @@ div:hover ~ #cursor {
   animation: translate-down-to-up 2s ease;
 }
 .container-slide-two .card-two {
-  margin-right: 15vw;
+  margin-right: 10vw;
   height: 80vh;
   width: 50vw;
   background-color: #141414;
@@ -378,14 +404,14 @@ div:hover ~ #cursor {
   bottom: -5%;
   font-size: 2.5rem;
   border-radius: 50%;
-  background-color: #D5D5D5;
-  color: #000;
+  background-color: #141414;
+  color: #D5D5D5;
   position: absolute;
   transition: 0.8s ease;
 }
 .container-slide-two .card-two a:hover {
-  background-color: #141414;
-  color: #D5D5D5;
+  background-color: #D5D5D5;
+  color: #141414;
   height: 16rem;
   width: 16rem;
 }

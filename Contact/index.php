@@ -11,10 +11,42 @@
 </head>
 
 <body>
-    
+    <!-- /!\ Formulaire de contact valde /!\ -->
+    <div id="boite">
+        <form id="form" enctype="multipart/form-data" onsubmit="return validate()" method="post">
+            <h2>Formulaire de contact</h2>
+            <label>Nom: <span>*</span></label>
+            <input type="text" id="name" name="name" placeholder="Nom" />
+            <label>Email: <span>*</span></label><span id="info" class="info"></span>
+            <input type="text" id="email" name="email" placeholder="Email" />
+            <label>Sujet: <span>*</span></label>
+            <input type="text" id="subject" name="subject" placeholder="Demande de renseignement" />
+            <label>Message:</label>
+            <textarea id="message" name="message" placeholder="Message..."></textarea>
+            <input type="submit" name="send" value="Envoyer le message" />
+            <div id="statusMessage">
+                <?php if (!empty($db_msg)) { ?>
+                    <p class='<?php echo $type_db_msg; ?>Message'><?php echo $db_msg; ?></p>
+                <?php } ?>
+                <?php if (!empty($mail_msg)) { ?>
+                    <p class='<?php echo $type_mail_msg; ?>Message'><?php echo $mail_msg; ?></p>
+                <?php } ?>
+            </div>
+        </form>
+    </div>
 
 
-    <!-- /!\ Test un aperçu de formulaire (temporairrement histoire de ce donner une première idée)/!\ -->
+
+
+
+
+
+
+
+
+    <!--
+
+     <!-- /!\ Test un aperçu de formulaire (temporairrement histoire de ce donner une première idée)/!\ ->
     <div class="page">
         <h2>Contacter l'Association
             <a href="https://AudioVisuel-montage.fr">AudioVisuel Montage</a>
@@ -99,13 +131,13 @@
                 </form>
 
             </div>
-            <!-- /.8 -->
+            <!-- /.8 ->
 
         </div>
-        <!-- /.row-->
+        <!-- /.row->
 
     </div>
-    <!-- /.container-->
+    <!-- /.container->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
@@ -116,18 +148,19 @@
         crossorigin="anonymous"></script>
     <script src="contact.js"></script>
 
-    <!-- /!\ Fin du TEST de FORMULAIRE /!\  -->
+    <!-- /!\ Fin du TEST de FORMULAIRE /!\  --> -->
 
 
     <header>
         <nav>
             <a class="boutons" href="../Projets/">Projets</a>
-            <div><h1><a href="../">AudioVisuel Montage</a></h1></div>
+            <div>
+                <h1><a href="../">AudioVisuel Montage</a></h1>
+            </div>
             <a href="../Connexion/">Connexion</a>
         </nav>
     </header>
     </div>
-
 </body>
 
 </html>
