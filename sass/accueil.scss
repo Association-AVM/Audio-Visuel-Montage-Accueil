@@ -177,7 +177,7 @@ div:hover ~ #cursor{
   transform:scale(0.5);
 }
 
-
+/*Animation*/
   @keyframes loader {
     0% { transform: rotate(0deg); transform: translateY(-10rem);}
     25% { transform: rotate(180deg);}

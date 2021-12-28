@@ -128,11 +128,51 @@ a:hover{
       align-items: flex-end;
       justify-content: center;
       display: flex;
-      h3{
+      .container-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         width: 30%;
+        overflow: hidden;
+        h2{
+          font-size: 6rem;
+          margin-bottom: 15vh;
+          animation: translate-right-to-left 3s ease;
+        }
+        .middle{
+          position: absolute;
+          top: 55%;
+          left: 25vw;
+          transform: translateX(-50%);
+          z-index:1;
+        }
+        .mouse{
+          width: 6rem;
+          height: 10rem;
+          border: 0.4rem solid #333;
+          border-radius: 6rem;
+          &::before{
+            content: '';
+            width: 1.5rem;
+            height: 1.5rem;
+            position: absolute;
+            background: #333;
+            top: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 50%;
+            opacity: 1;
+            animation: mouse 2s infinite;
+          }
+        }
+      }
+      h3{
         font-size: 2.5rem;
         text-align: justify;
-        margin-right: 2rem;
+        margin-right: 2.5rem;
+        padding-bottom: 1rem;
+        animation: translate-down-to-up 2s ease;
+
       }
       .card{
         height: 80vh;
@@ -145,8 +185,9 @@ a:hover{
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
+        animation: fade 2.5s;
         &::before{
-          content: 'Charles-Adrien Vlamynck';
+          content: '01 - Charles-Adrien Vlamynck';
           position: absolute;
           font-size: 6rem;
           top: -6%;
@@ -157,7 +198,6 @@ a:hover{
         }
           a{
             display: flex;
-            justify-content: center;
             align-items: center;
             text-align: center;
             text-decoration: none;
@@ -182,14 +222,88 @@ a:hover{
           color: #fff;
           transform-origin: bottom left;
           transform: rotate(-90deg)translateY(100%);
+          animation: 5s ease fade;
+
         }
       }
     }
 
 
+    .loader-wrapper {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #3f2424;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    
+      .loader {
+        display: inline-block;
+        width: 3rem;
+        height: 3rem;
 
+        position: relative;
+        border: 4px solid #fff;
+        animation: loader 3s infinite ease;
+      
+        .loader-inner {
+          vertical-align: top;
+          display: inline-block;
+          width: 100%;
+          background-color: #fff;
+          animation: loader-inner 3s infinite ease-in;
+        }
+      }
+    }
+  
 
+/*Animation*/
+
+    @keyframes mouse{
+      from{
+        opacity: 1;
+        top: 1rem;
+      }
+      to{
+        opacity: 0;
+        top: 8rem;
+      }
+    }
+    @keyframes loader {
+      0% { transform: rotate(0deg); transform: translateY(10rem); border-radius: 3rem;}
+      25% { transform: rotate(180deg);}
+      50% { transform: rotate(180deg);}
+      75% { transform: rotate(360deg);}
+      100% { transform: rotate(360deg); border-radius: 0rem}
+    }
+    @keyframes loader-inner {
+      0% { height: 0%;}
+      25% { height: 0%;}
+      50% { height: 100%;}
+      75% { height: 100%;}
+      100% { height: 0%;}
+    }
+
+    @keyframes fade {
+      0% {opacity: 0;}
+      100% {opacity: 1;}
+    }
     @keyframes translate-left-to-right{
       0%{transform: translateX(-20rem);}
       100% {transform: translateX(0);}
+    }
+    @keyframes translate-right-to-left{
+      0%{transform: translateX(60rem);}
+      100% {transform: translateX(0);}
+    }
+    @keyframes translate-down-to-up{
+      0%{transform: translateY(20rem);}
+      100% {transform: translateY(0rem);}
+    }
+    @keyframes translate-up-to-down{
+      0%{transform: translateY(-10rem);}
+      100% {transform: translateY(0rem);}
     }
