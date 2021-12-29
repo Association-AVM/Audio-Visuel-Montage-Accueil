@@ -15,7 +15,7 @@ body {
   overflow: hidden;
 }
 
-a:hover {
+a:hover, #icon:hover {
   cursor: url("../Assets/cursor-mini.png"), auto;
 }
 
@@ -46,7 +46,7 @@ div:hover ~ #cursor {
 .blocHorizontal {
   display: flex;
   flex-direction: row;
-  width: 540vw;
+  width: 530vw;
   transform: rotate(90deg) translateY(-100vh);
   transform-origin: top left;
 }
@@ -63,7 +63,7 @@ div:hover ~ #cursor {
 }
 
 ::-webkit-scrollbar {
-  width: 1.7rem;
+  width: 1.5rem;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -76,7 +76,7 @@ div:hover ~ #cursor {
 
 .two {
   background-color: #30548a;
-  width: 240vw;
+  width: 230vw;
 }
 
 .three {
@@ -235,11 +235,11 @@ div:hover ~ #cursor {
 .container-slide-two .background-1 {
   height: 70vh;
   width: 55vw;
+  margin-right: 10vw;
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url(https://images.pexels.com/photos/4595636/pexels-photo-4595636.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-right: 10vw;
   transition: 0.3s;
   position: relative;
 }
@@ -247,7 +247,7 @@ div:hover ~ #cursor {
   content: "02.1 - Faites vivre vos projets";
   position: absolute;
   font-size: 9rem;
-  width: 111%;
+  width: 113%;
   top: 40%;
   left: -5%;
   background: linear-gradient(#d1b33b 60%, #D5D5D5 60%);
@@ -263,13 +263,13 @@ div:hover ~ #cursor {
   flex-direction: column;
 }
 .container-slide-two .background-2 {
-  height: 60vh;
+  height: 75vh;
   width: 60vw;
+  margin-right: 5vw;
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url(https://images.pexels.com/photos/7909364/pexels-photo-7909364.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-right: 10vw;
   transition: 0.3s;
   position: relative;
 }
@@ -278,7 +278,7 @@ div:hover ~ #cursor {
   position: absolute;
   font-size: 8rem;
   width: 112%;
-  bottom: -7%;
+  bottom: -5%;
   left: -5%;
   background: linear-gradient(#9c3535 60%, #141414 60%);
   -webkit-background-clip: text;
@@ -450,6 +450,19 @@ div:hover ~ #cursor {
   width: 100%;
   background-color: #fff;
   animation: loader-inner 3s infinite ease-in;
+}
+
+#song {
+  border-radius: 50%;
+  top: 5%;
+  right: 3%;
+  position: absolute;
+}
+
+#icon {
+  box-shadow: 5px 5px 10px #141414;
+  width: 10vh;
+  cursor: pointer;
 }
 
 /*Animation*/

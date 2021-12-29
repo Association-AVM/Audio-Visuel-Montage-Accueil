@@ -21,7 +21,7 @@ body {
   background-color: #141414;
   overflow: hidden;
 }
-a:hover{
+a:hover,#icon:hover{
   cursor: url("../Assets/cursor-mini.png"),auto;    
 }
 
@@ -51,7 +51,7 @@ a:hover{
   .blocHorizontal{
     display: flex;
     flex-direction: row;
-    width: 540vw;
+    width: 530vw;
     transform: rotate(90deg) translateY(-100vh);
     transform-origin: top left;
   }
@@ -69,7 +69,7 @@ a:hover{
     scrollbar-width: none;
   }
 ::-webkit-scrollbar{
-  width: 1.7rem;
+  width: 1.5rem;
 }
 ::-webkit-scrollbar-thumb{
   background: $jaune;
@@ -81,7 +81,7 @@ a:hover{
   }
   .two{
     background-color: $bleu;
-    width: 240vw;
+    width: 230vw;
   }
   .three {
     background-color: $rouge;
@@ -236,18 +236,18 @@ a:hover{
       .background-1{
         height: 70vh;
         width: 55vw;
+        margin-right: 10vw;
         background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.8)),url(https://images.pexels.com/photos/4595636/pexels-photo-4595636.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        margin-right: 10vw;
         transition: 0.3s;
         position: relative;
         &::before{
           content: '02.1 - Faites vivre vos projets';
           position: absolute;
           font-size: 9rem;
-          width: 111%;
+          width: 113%;
           top: 40%;
           left: -5%;
           background: linear-gradient( $jaune 60%, $blanc 60%);
@@ -264,13 +264,13 @@ a:hover{
         flex-direction: column;        
       }
       .background-2{
-        height: 60vh;
+        height: 75vh;
         width: 60vw;
+        margin-right: 5vw;
         background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.6)),url(https://images.pexels.com/photos/7909364/pexels-photo-7909364.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        margin-right: 10vw;
         transition: 0.3s;
         position: relative;
         &::before{
@@ -278,7 +278,7 @@ a:hover{
           position: absolute;
           font-size: 8rem;
           width: 112%;
-          bottom: -7%;
+          bottom: -5%;
           left: -5%;
           background: linear-gradient( #9c3535 60%, $noir 60%);
 	        -webkit-background-clip: text;
@@ -464,7 +464,18 @@ a:hover{
         }
       }
     }
-  
+  #song{
+    border-radius: 50%;
+    top: 5%;
+    right: 3%;
+    position: absolute;
+  }
+  #icon{
+    box-shadow: 5px 5px 10px $noir;
+    width: 10vh;
+    cursor: pointer;
+  }
+
 
 /*Animation*/
 
