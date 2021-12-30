@@ -32,7 +32,7 @@ canvas{
 #container-header{
     position: absolute;
 	  width: 100%;
-    top: 35%;
+    top: 30%;
     animation: fade 2.5s ease-in;
 }
 header{
@@ -71,19 +71,15 @@ header{
               animation: translate-up-to-down 3s;
             }
             #histoire{
-              margin-top: 5vh;
+              margin-top: 10vh;
               height: 25vh;
               width: 30vw;
               position: relative;
               box-shadow:10px 10px 20px black;
               overflow: hidden;
               padding: 1rem;
-              border: 3mm ridge $jaune;
-              transition: 0.5s;
+              border-bottom: 0.5rem double $jaune;
               animation: fade 5s ease-in;
-              &:hover{
-                border: 4mm ridge $bleu;
-              }
               p{
               position: absolute;
               text-align: justify;
@@ -261,6 +257,6 @@ header{
   @keyframes carocel{
     0%{top: 0%;}
     10%{top: 0%;}
-    90%{top: -340%;}
+    90%{top: -300%;}
     100%{top: 0%;}
   }
