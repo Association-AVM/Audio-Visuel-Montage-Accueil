@@ -32,7 +32,7 @@ canvas{
 #container-header{
     position: absolute;
 	  width: 100%;
-    top: 45%;
+    top: 35%;
     animation: fade 2.5s ease-in;
 }
 header{
@@ -47,7 +47,7 @@ header{
             overflow: hidden;
             h1{
                 z-index:2;
-                font-size: 9rem;
+                font-size: 11rem;
                 font-family: 'Libre Baskerville', serif;
                 color: #fff;
                 margin:0;
@@ -66,10 +66,34 @@ header{
             h3{
               z-index:2;
               letter-spacing:0.6rem;
-              font-size:2rem;
+              font-size:2.5rem;
               text-align:center;
               animation: translate-up-to-down 3s;
             }
+            #histoire{
+              margin-top: 5vh;
+              height: 25vh;
+              width: 30vw;
+              position: relative;
+              box-shadow:10px 10px 20px black;
+              overflow: hidden;
+              padding: 1rem;
+              border: 3mm ridge $jaune;
+              transition: 0.5s;
+              animation: fade 5s ease-in;
+              &:hover{
+                border: 4mm ridge $bleu;
+              }
+              p{
+              position: absolute;
+              text-align: justify;
+              overflow: hidden;
+              width: 30vw;
+              top: 0%;
+              font-size: 2.5rem;
+              animation: carocel 65s infinite linear;
+            }
+          }
         }
 }
 
@@ -81,7 +105,7 @@ header{
   background-color:$noir;
   transition: box-shadow 1s;
   &:hover{
-  box-shadow: 20rem 0rem 5rem -10rem $bleu inset; 
+  box-shadow: 16rem 0rem 5rem -10rem $bleu inset; 
 
   }
 }
@@ -118,7 +142,7 @@ header{
     background-color:$noir;
     transition: box-shadow 1s;
     &:hover{
-    box-shadow: -20rem 0rem 5rem -10rem $bleu inset; 
+    box-shadow: -16rem 0rem 5rem -10rem $bleu inset; 
   
     }
   }
@@ -233,4 +257,10 @@ header{
   @keyframes translate-up-to-down{
     0%{transform: translateY(-10rem);}
     100% {transform: translateY(0rem);}
+  }
+  @keyframes carocel{
+    0%{top: 0%;}
+    10%{top: 0%;}
+    90%{top: -340%;}
+    100%{top: 0%;}
   }
