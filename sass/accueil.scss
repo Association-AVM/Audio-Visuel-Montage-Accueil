@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
 
 /*font-family: 'Playfair Display', serif;*/
-$jaune:#EBC116;
+$jaune:#d1b33b;
 $bleu:#30548a;
+$rouge:#6d3434;
+$blanc:#D5D5D5;
 $noir:#141414;
 
 html{
@@ -44,12 +46,22 @@ header{
             align-items:center;
             overflow: hidden;
             h1{
-              z-index:2;
+                z-index:2;
                 font-size: 9rem;
                 font-family: 'Libre Baskerville', serif;
                 color: #fff;
                 margin:0;
                 animation: translate-down-to-up 2s;
+                position: relative;
+                &::after{
+                  content: '';
+                  height: 0.8rem;
+                  width: 15rem;
+                  background-color: $jaune;
+                  position: absolute;
+                  left: 0%;
+                  bottom: 0%;
+                }
             }
             h3{
               z-index:2;
@@ -172,9 +184,19 @@ header{
   display:none;
   transition:0.3s;
   transition-timing-function: ease-out;
+  transform: scale(0.5);
 }
-div:hover ~ #cursor{
-  transform:scale(0.5);
+#me{
+  position: absolute;
+  margin: 0;
+  bottom: 1%;
+  left: 0%;
+  color: $blanc;
+  font-size: 1.5rem;
+  span{
+    color: $jaune;
+    font-size: 1.8rem;
+  }
 }
 
 /*Animation*/

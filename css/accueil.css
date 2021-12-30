@@ -52,6 +52,16 @@ header #wrapper-header h1 {
   color: #fff;
   margin: 0;
   animation: translate-down-to-up 2s;
+  position: relative;
+}
+header #wrapper-header h1::after {
+  content: "";
+  height: 0.8rem;
+  width: 15rem;
+  background-color: #d1b33b;
+  position: absolute;
+  left: 0%;
+  bottom: 0%;
 }
 header #wrapper-header h3 {
   z-index: 2;
@@ -93,7 +103,7 @@ header #wrapper-header h3 {
   animation: translate-left-to-right 2.5s;
 }
 #wrapper-nav a:hover {
-  color: #EBC116;
+  color: #d1b33b;
   width: 100%;
 }
 
@@ -128,7 +138,7 @@ header #wrapper-header h3 {
   animation: translate-right-to-left 2.5s;
 }
 #wrapper-reseaux a:hover {
-  color: #EBC116;
+  color: #d1b33b;
   width: 100%;
 }
 
@@ -168,10 +178,20 @@ header #wrapper-header h3 {
   display: none;
   transition: 0.3s;
   transition-timing-function: ease-out;
+  transform: scale(0.5);
 }
 
-div:hover ~ #cursor {
-  transform: scale(0.5);
+#me {
+  position: absolute;
+  margin: 0;
+  bottom: 1%;
+  left: 0%;
+  color: #D5D5D5;
+  font-size: 1.5rem;
+}
+#me span {
+  color: #d1b33b;
+  font-size: 1.8rem;
 }
 
 /*Animation*/
