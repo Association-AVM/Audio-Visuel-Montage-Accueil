@@ -3,10 +3,15 @@ var controller = new ScrollMagic.Controller({vertical:false});
 
 //Tween
 var song = TweenMax.from("#song",2,{opacity:0,rotation:-100,ease:Power3.easeInOut})
+var scrollBar = TweenMax.to("body",1,{backgroundColor:"#30548a"})
+var scrollBar2 = TweenMax.to("body",1,{backgroundColor:"#6d3434"})
+var scrollBar3 = TweenMax.to("body",1,{backgroundColor:"#D5D5D5"})
+var scrollBar4 = TweenMax.to("body",1,{backgroundColor:"#141414"})
+
 
 var textTwo = TweenMax.from(".container-text-two",1,{opacity:0, ease:Power2.easeInOut})
 var cardTwo = TweenMax.from(".card-two",1.5,{opacity:0,top :-300,ease: Power2.easeInOut})
-var backgroundOneTwo = TweenMax.from(".background-1",1,{opacity:0,left :-300,rotation:20,ease: Power2.easeInOut})
+var backgroundOneTwo = TweenMax.from(".background-1",1,{opacity:0,bottom :-300,ease: Power2.easeInOut})
 var backgroundTwoTwo = TweenMax.from(".background-2",1,{opacity:0,left:-300,rotation:-30,ease: Power2.easeInOut})
 
 var slideThree = TweenMax.from(".three",2,{opacity:0,top:-300,ease: Power2.easeInOut})
@@ -21,8 +26,32 @@ var cardFour = TweenMax.from(".card-four",1.5,{opacity:0,top :-300,ease: Power2.
 
 //scene scrollmagic
 var sceneSong = new ScrollMagic.Scene({triggerElement:".one"})
-                                  .triggerHook(1)
+                                  .triggerHook(0.4)
                                   .setTween(song)
+                                  .reverse(false)
+                                  .addTo(controller)
+
+var sceneScrollbar = new ScrollMagic.Scene({triggerElement:".two"})
+                                  .triggerHook(0.4)
+                                  .setTween(scrollBar)
+                                  .reverse(false)
+                                  .addTo(controller)
+
+var sceneScrollbar2 = new ScrollMagic.Scene({triggerElement:".three"})
+                                  .triggerHook(0.4)
+                                  .setTween(scrollBar2)
+                                  .reverse(false)
+                                  .addTo(controller)
+
+var sceneScrollbar3 = new ScrollMagic.Scene({triggerElement:".four"})
+                                  .triggerHook(0.4)
+                                  .setTween(scrollBar3)
+                                  .reverse(false)
+                                  .addTo(controller)
+                                  
+                                  var sceneScrollbar4 = new ScrollMagic.Scene({triggerElement:".five"})
+                                  .triggerHook(0.4)
+                                  .setTween(scrollBar4)
                                   .reverse(false)
                                   .addTo(controller)
 

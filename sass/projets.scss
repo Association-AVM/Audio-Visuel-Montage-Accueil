@@ -12,13 +12,12 @@ html{
     font-size: 10px;
     color:black;
     cursor: url("../Assets/cursor-mini.png"),auto;    
-
 }
 body {
   margin: 0;
   padding: 0;
   font-family: 'Playfair Display', serif;
-  background-color: #141414;
+  background-color: $jaune;
   overflow: hidden;
 }
 a:hover,#icon:hover{
@@ -73,7 +72,7 @@ a:hover,#icon:hover{
   width: 1.5rem;
 }
 ::-webkit-scrollbar-thumb{
-  background: $jaune;
+  background: $noir;
 }
 
 

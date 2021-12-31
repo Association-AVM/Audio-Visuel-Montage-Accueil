@@ -11,7 +11,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Playfair Display", serif;
-  background-color: #141414;
+  background-color: #d1b33b;
   overflow: hidden;
 }
 
@@ -68,7 +68,7 @@ div:hover ~ #cursor {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #d1b33b;
+  background: #141414;
 }
 
 .one {
