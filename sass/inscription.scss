@@ -21,10 +21,10 @@ html{
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+    background-color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
-
     #form{
         justify-content: space-around;
         display: flex;
@@ -38,7 +38,7 @@ html{
         &::before{
             content: 'AudioVisuel - Montage';
             position: absolute;
-            top: -6%;
+            top: -4%;
             font-size: 4rem;
             width: 100%;
             left: 50%;
@@ -50,7 +50,7 @@ html{
         #up{
             margin-top: 3rem;
             position: relative;
-            #connexion{
+            #inscription{
                 position: relative;
                 &::after{
                     content: '';
@@ -59,7 +59,7 @@ html{
                     width: 30%;
                     height: 0.5rem;
                     bottom: -10%;
-                    left: 0%;
+                    right: 0%;
                 }
             }
             a{
@@ -75,8 +75,11 @@ html{
             display: flex;
             flex-direction: column;
             align-items: center;
+            input[type="date"]::-webkit-calendar-picker-indicator{
+                background: none;
+            }
             .upper{
-                padding: 2rem;
+                padding: 1rem;
             h2{
                 text-align: start;
                 font-size: 2.3rem;
@@ -90,8 +93,8 @@ html{
                 outline: none;
                 color: $jaune;
                 font-size: 2rem;
+             }
             }
-        }
         }
         #button{
             display: flex;
@@ -111,29 +114,11 @@ html{
                 &:hover{
                     background-color: #1b345a;
                 }
-            }
-            #google{
-                background-color: $blanc;
-                color: $noir;
-                font-size: 1.8rem;
-                padding: 2rem 4rem;
-                width: 50%;
-                transition: 0.3s;
-                &:hover{
-                    background-color: #9c9c9c;
-                }
-            }
-            #btnTwo{
-                font-size: 1.5rem;
-                color: $jaune;
-                &:hover{
-                    text-decoration: underline;
-                }
-            }
-            
+            }            
         }
     }
 }
+
 
 /*Responsive téléphone*/
 @media screen and (max-width:640px) {

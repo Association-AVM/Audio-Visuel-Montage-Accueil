@@ -6,7 +6,8 @@
         $email = $_POST["email"];
         $subject = $_POST["subject"];
         $message = $_POST["message"];
-                                    //Il faut modifier l'adresse de connexion, le compte utilisateur et le mot de passe.
+
+    //Il faut modifier l'adresse de connexion, le compte utilisateur et le mot de passe.
         $connexion = mysqli_connect("localhost", "root", "", "contact_form") or die("Erreur de connexion: " . mysqli_error($connexion));
         $result = mysqli_query($connexion, "INSERT INTO contact (name, email, subject, message) VALUES ('" . $name . "', '" . $email . "','" . $subject . "','" . $message . "')");
         if ($result) {

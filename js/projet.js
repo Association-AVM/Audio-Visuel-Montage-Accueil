@@ -12,7 +12,7 @@ var scrollBar4 = TweenMax.to("body",1,{backgroundColor:"#141414"})
 var textTwo = TweenMax.from(".container-text-two",1,{opacity:0, ease:Power2.easeInOut})
 var cardTwo = TweenMax.from(".card-two",1.5,{opacity:0,top :-300,ease: Power2.easeInOut})
 var backgroundOneTwo = TweenMax.from(".background-1",1,{opacity:0,bottom :-300,ease: Power2.easeInOut})
-var backgroundTwoTwo = TweenMax.from(".background-2",1,{opacity:0,left:-300,rotation:-30,ease: Power2.easeInOut})
+var backgroundTwoTwo = TweenMax.from(".background-2",1,{opacity:0,left:-300,ease: Power2.easeInOut})
 
 var slideThree = TweenMax.from(".three",2,{opacity:0,top:-300,ease: Power2.easeInOut})
 var cardThree = TweenMax.from(".card-three",2,{opacity:0,right :-300,ease: Power2.easeInOut})
