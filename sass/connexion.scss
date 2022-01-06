@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
 /*font-family: 'Playfair Display', serif;*/
 
 $jaune:#d1b33b;
@@ -6,17 +7,18 @@ $bleu:#30548a;
 $rouge:#6d3434;
 $blanc:#D5D5D5;
 $noir:#141414;
-*{
+* {
     margin: 0;
     padding: 0;
 }
-html{
+
+html {
     font-size: 10px;
     font-family: 'Playfair Display', serif;
-
 }
-#page{
-    background-image: linear-gradient(rgba(38, 43, 110, 0.4),rgba(36, 44, 109, 0.4)),url(https://images.pexels.com/photos/10643872/pexels-photo-10643872.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+
+#page {
+    background-image: linear-gradient(rgba(38, 43, 110, 0.4), rgba(36, 44, 109, 0.4)), url(https://images.pexels.com/photos/10643872/pexels-photo-10643872.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -24,8 +26,7 @@ html{
     display: flex;
     justify-content: center;
     align-items: center;
-
-    #form{
+    #form {
         justify-content: space-around;
         display: flex;
         flex-direction: column;
@@ -34,8 +35,8 @@ html{
         width: 25vw;
         color: $blanc;
         position: relative;
-        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
-        &::before{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+        &::before {
             content: 'AudioVisuel - Montage';
             position: absolute;
             top: -6%;
@@ -44,15 +45,15 @@ html{
             left: 50%;
             transform: translate(-50%);
             background: linear-gradient( $noir 60%, #ebc119 60%);
-	        -webkit-background-clip: text;
-	        -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-        #up{
+        #up {
             margin-top: 3rem;
             position: relative;
-            #connexion{
+            #connexion {
                 position: relative;
-                &::after{
+                &::after {
                     content: '';
                     position: absolute;
                     background-color: $jaune;
@@ -62,104 +63,110 @@ html{
                     left: 0%;
                 }
             }
-            a{
+            a {
                 text-decoration: none;
                 color: $blanc;
                 font-size: 3rem;
                 margin: 0rem 2rem;
                 transition: 0.3s;
-                &:hover{color: $noir;}
+                &:hover {
+                    color: $noir;
+                }
             }
         }
         #container-form {
             display: flex;
             flex-direction: column;
             align-items: center;
-            .upper{
+            .upper {
                 padding: 2rem;
-            h2{
-                text-align: start;
-                font-size: 2.3rem;
-                padding: 1rem 0rem;
-            }
-            input{
-                border: none;
-                background-color: transparent;
-                border-bottom: 0.2rem solid $jaune;
-                width: 100%;
-                outline: none;
-                color: $jaune;
-                font-size: 2rem;
+                h2 {
+                    text-align: start;
+                    font-size: 2.3rem;
+                    padding: 1rem 0rem;
+                }
+                input {
+                    border: none;
+                    background-color: transparent;
+                    border-bottom: 0.2rem solid $jaune;
+                    width: 100%;
+                    outline: none;
+                    color: $jaune;
+                    font-size: 2rem;
+                }
             }
         }
-        }
-        #button{
+        #button {
             display: flex;
             flex-direction: column;
             align-items: center;
-            a{
+            a {
                 text-decoration: none;
                 color: $blanc;
                 font-size: 2rem;
                 margin-bottom: 2rem;
             }
-            #btnOne{
+            #btnOne {
                 background-color: $bleu;
                 padding: 2rem 4rem;
                 width: 50%;
                 transition: 0.3s;
-                &:hover{
+                &:hover {
                     background-color: #1b345a;
                 }
             }
-            #google{
+            #google {
                 background-color: $blanc;
                 color: $noir;
                 font-size: 1.8rem;
                 padding: 2rem 4rem;
                 width: 50%;
                 transition: 0.3s;
-                &:hover{
+                &:hover {
                     background-color: #9c9c9c;
                 }
             }
-            #btnTwo{
+            #btnTwo {
                 font-size: 1.5rem;
                 color: $jaune;
-                &:hover{
+                &:hover {
                     text-decoration: underline;
                 }
             }
-            
         }
     }
 }
 
+
 /*Responsive téléphone*/
+
 @media screen and (max-width:640px) {
-    html{
+    html {
         font-size: 2vw;
     }
-    #page{
-        #form{
+    #page {
+        #form {
             height: 80vh;
             width: 90vw;
-            &::before{
+            &::before {
                 content: '';
             }
         }
     }
 }
+
+
 /*Responsive tablette*/
-@media screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-    html{
+
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    html {
         font-size: 1.2vw;
     }
-    #page{
-        #form{
+    #page {
+        #form {
             height: 70vh;
             width: 60vw;
-            &::before{
+            &::before {
                 content: '';
             }
         }
