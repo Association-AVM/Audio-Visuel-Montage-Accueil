@@ -8,7 +8,7 @@ const scene = new THREE.Scene()
 scene.background = new THREE.Color("#141414")
 const loader = new GLTFLoader()
 
-loader.load('../Assets/car.gltf', function(gltf){
+loader.load('../Assets/', function(gltf){
     console.log(gltf)
     const mesh = gltf.scene;
     mesh.position.set(0,-0.5,0)
@@ -18,7 +18,7 @@ loader.load('../Assets/car.gltf', function(gltf){
 })
 
 const light = new THREE.DirectionalLight(0xffffff,3)
-light.position.set(1,1,10)
+light.position.set(1,1,100)
 scene.add(light)
 
 

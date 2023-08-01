@@ -281,13 +281,13 @@ div:hover ~ #cursor {
   position: relative;
 }
 .container-slide-two .background-2::before {
-  content: "02.2 - Une équipe entière pour vous";
+  content: "02.2 - Une équipe à votre disposition";
   position: absolute;
   font-size: 8rem;
   width: 112%;
   bottom: -5%;
   left: -5%;
-  background: linear-gradient(#9c3535 60%, #141414 60%);
+  background: linear-gradient(#9c3535 60%, #d1b33b 60%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

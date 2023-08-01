@@ -70,6 +70,7 @@ header #wrapper-header h3 {
   text-align: center;
   animation: translate-up-to-down 3s;
 }
+
 header #wrapper-header #histoire {
   margin-top: 10vh;
   height: 25vh;
@@ -79,17 +80,32 @@ header #wrapper-header #histoire {
   overflow: hidden;
   padding: 1rem;
   border-bottom: 0.5rem double #d1b33b;
-  animation: fade 5s ease-in;
+  animation: fade 8s ease-in;
 }
 header #wrapper-header #histoire p {
   position: absolute;
   text-align: justify;
-  overflow: hidden;
+  overflow: visible;
   width: 30vw;
   top: 0%;
   font-size: 2.5rem;
-  animation: carocel 65s infinite linear;
+  /*animation: carocel 10s linear infinite;*/
+  animation: marquee 240s linear infinite;
+  
+  /*white-space: nowrap;*/
 }
+
+/*Nouvelle méthode de scroll*/
+@keyframes marquee {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+
 
 #container-nav {
   position: absolute;
