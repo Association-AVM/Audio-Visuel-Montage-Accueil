@@ -90,7 +90,7 @@ header #wrapper-header #histoire p {
   top: 0%;
   font-size: 2.5rem;
   /*animation: carocel 10s linear infinite;*/
-  animation: marquee 240s linear infinite;
+  animation: marquee 200s linear infinite;
   
   /*white-space: nowrap;*/
 }
